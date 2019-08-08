@@ -1,18 +1,21 @@
-* Download VMware workstation 15 and [
+* Download (VMware workstation 15)[https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html] and [
 ubuntu-16.04.6-desktop-amd64.iso](
-http://hr.releases.ubuntu.com/16.04.6/)
-* Operations in Ubuntu Terminal
+http://hr.releases.ubuntu.com/16.04.6/) Meanwhile please set the username and password for Ubuntu system
+* Operations in Ubuntu 16.04.6<br>
+In Ubuntu Terminal
     * Update the install method ```sudo apt update```
     * ```sudo apt install python2.7 python-pip```  install python2.7 which will reach the end of its life on Jan 1st 2020
     * Check the version of python on Ubuntu ```readlink -f $(which python) | xargs -I % sh -c 'echo -n "%: "; % -V'```
     * ```sudo apt install git``` install git
     * ```git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git``` clone galaxy project v17.09
-    * ```sh /home/yilinxia/galaxy/run.sh``` directory is the path you clone to . Run galaxy in local PC. will take a little long time to settle up
-
-    * use ```http://localhost:8080/``` or ```http://127.0.0.1:8080/```to accessthe  homepage of the galaxy
-    * use ```Ctrl+c``` to terminate the terminal to stop the server
-    * clone the mtbls520 repo ```git clone https://github.com/korseby/container-mtbls520.git```
-    * Mannually add tools to galaxy: search for file named: ```tool_conf.xml.main``` and add xmls to this file
+    * ```sh /home/username/galaxy/run.sh``` directory is the path you clone galaxy to. Galaxy in local PC will take a little long time to settle up
+    * use ```http://localhost:8080/``` or ```http://127.0.0.1:8080/```to access the homepage of the galaxy
+    * use ```Ctrl+c``` to terminate the terminal to stop the server<br>
+Now add tools to the local galaxy platform
+    * clone the mtbls520 repo ```git clone https://github.com/korseby/container-mtbls520.git``` Under the container-mtbls520 folder, you can find three other folders named:galaxy, scripts, and tutorials same as (link)[https://github.com/korseby/container-mtbls520]<br>
+**here we have two folders, one is called galaxy(/home/usename/galaxy) while another is called container-mtbls520 (/home/usename/container-mtbls520)**
+    * copy folder galaxy(/home/usename/container-mtbls520/galaxy) to foler tools (/home/usename/galaxy/tools) and chnage it name to ```ecomet```
+    * search for xml file ```tool_conf.xml.sample``` , add the xmls as following to this file and then change the name from  ```tool_conf.xml.sample``` to  ```tool_conf.xml```
 ```
 <section name="Eco-Metabolomics" id="ecomet">
     <tool file="ecomet/mtbls520_01_mtbls_download.xml"/>
@@ -49,3 +52,4 @@ http://hr.releases.ubuntu.com/16.04.6/)
     <tool file="ecomet/mtbls520_24_seasons_nmds.xml"/>
   </section>
 ```
+   * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions (here)[https://github.com/korseby/container-mtbls520/tree/master/tutorial]
