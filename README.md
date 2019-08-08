@@ -16,8 +16,8 @@ Now add tools to the local galaxy platform
 **here we have two folders, one is called galaxy(/home/usename/galaxy) while another is called container-mtbls520 (/home/usename/container-mtbls520)**
     * copy folder galaxy(/home/usename/container-mtbls520/galaxy) to folder tools (/home/usename/galaxy/tools) and change it name to ```ecomet```
     * search for xml file ```tool_conf.xml.sample``` , add the xmls as following to this file and then change the name from  ```tool_conf.xml.sample``` to  ```tool_conf.xml```
-```
-<section name="Eco-Metabolomics" id="ecomet">
+    ```
+  <section name="Eco-Metabolomics" id="ecomet">
     <tool file="ecomet/mtbls520_01_mtbls_download.xml"/>
     <tool file="ecomet/mtbls520_02a_raw_extract.xml"/>
     <tool file="ecomet/mtbls520_02b_qc_extract.xml"/>
@@ -52,4 +52,6 @@ Now add tools to the local galaxy platform
     <tool file="ecomet/mtbls520_24_seasons_nmds.xml"/>
   </section>
 ```
-* restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions [here](https://github.com/korseby/container-mtbls520/tree/master/tutorial)
+
+    * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions [here](https://github.com/korseby/container-mtbls520/tree/master/tutorial)
+ 
