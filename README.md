@@ -1,6 +1,20 @@
+* Download VMware workstation 15 and [
+ubuntu-16.04.6-desktop-amd64.iso](
+http://hr.releases.ubuntu.com/16.04.6/)
+* Operations in Ubuntu Terminal
+    * Update the install method ```sudo apt update```
+    * ```sudo apt install python2.7 python-pip```  install python2.7 which will reach the end of its life on Jan 1st 2020
+    * Check the version of python on Ubuntu ```readlink -f $(which python) | xargs -I % sh -c 'echo -n "%: "; % -V'```
+    * ```sudo apt install git``` install git
+    * ```git clone -b release_17.09 https://github.com/galaxyproject/galaxy.git``` clone galaxy project v17.09
+    * ```sh /home/yilinxia/galaxy/run.sh``` directory is the path you clone to . Run galaxy in local PC. will take a little long time to settle up
+
+    * use ```http://localhost:8080/``` or ```http://127.0.0.1:8080/```to accessthe  homepage of the galaxy
+    * use ```Ctrl+c``` to terminate the terminal to stop the server
+    * clone the mtbls520 repo ```git clone https://github.com/korseby/container-mtbls520.git```
+    * Mannually add tools to galaxy: search for file named: ```tool_conf.xml.main``` and add xmls to this file
 ```
-tool_conf.xml:
-  <section name="Eco-Metabolomics" id="ecomet">
+<section name="Eco-Metabolomics" id="ecomet">
     <tool file="ecomet/mtbls520_01_mtbls_download.xml"/>
     <tool file="ecomet/mtbls520_02a_raw_extract.xml"/>
     <tool file="ecomet/mtbls520_02b_qc_extract.xml"/>
