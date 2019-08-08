@@ -12,7 +12,7 @@ In Ubuntu Terminal
     * use ```http://localhost:8080/``` or ```http://127.0.0.1:8080/```to access the homepage of the galaxy
     * use ```Ctrl+c``` to terminate the terminal to stop the server<br>
 Now add tools to the local galaxy platform
-    * clone the mtbls520 repo ```git clone https://github.com/korseby/container-mtbls520.git``` Under the container-mtbls520 folder, you can find three other folders named:galaxy, scripts, and tutorials same as (link)[https://github.com/korseby/container-mtbls520]<br>
+    * clone the mtbls520 repo ```git clone https://github.com/korseby/container-mtbls520.git``` Under the container-mtbls520 folder, you can find three other folders named:galaxy, scripts, and tutorials same as [link](https://github.com/korseby/container-mtbls520)<br>
 **here we have two folders, one is called galaxy(/home/usename/galaxy) while another is called container-mtbls520 (/home/usename/container-mtbls520)**
     * copy folder galaxy(/home/usename/container-mtbls520/galaxy) to folder tools (/home/usename/galaxy/tools) and change it name to ```ecomet```
     * search for xml file ```tool_conf.xml.sample``` , add the xmls as following to this file and then change the name from  ```tool_conf.xml.sample``` to  ```tool_conf.xml```
