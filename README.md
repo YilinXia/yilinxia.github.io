@@ -1,4 +1,4 @@
-* Download (VMware workstation 15)[https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html] and [
+* Download [VMware workstation 15](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html) and [
 ubuntu-16.04.6-desktop-amd64.iso](
 http://hr.releases.ubuntu.com/16.04.6/) Meanwhile please set the username and password for Ubuntu system
 * Operations in Ubuntu 16.04.6<br>
@@ -52,4 +52,4 @@ Now add tools to the local galaxy platform
     <tool file="ecomet/mtbls520_24_seasons_nmds.xml"/>
   </section>
 ```
-   * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions (here)[https://github.com/korseby/container-mtbls520/tree/master/tutorial]
+   * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions [here](https://github.com/korseby/container-mtbls520/tree/master/tutorial)
