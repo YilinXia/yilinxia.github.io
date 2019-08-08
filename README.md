@@ -52,4 +52,4 @@ Now add tools to the local galaxy platform
     <tool file="ecomet/mtbls520_24_seasons_nmds.xml"/>
   </section>
 ```
-      * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions [here](https://github.com/korseby/container-mtbls520/tree/master/tutorial)
+   * restart the local galaxy platform by ```sh /home/username/galaxy/run.sh``` and following the instructions [here](https://github.com/korseby/container-mtbls520/tree/master/tutorial)
