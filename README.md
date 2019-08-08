@@ -23,7 +23,7 @@ Now add tools to the local galaxy platform
 
 
 ### Appendix
-<br>XMLs
+XMLs
 ```
 <section name="Eco-Metabolomics" id="ecomet">
     <tool file="ecomet/mtbls520_01_mtbls_download.xml"/>
