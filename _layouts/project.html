@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% if page.accent_color %}{% capture accent_color %}{{ page.accent_color }}{% endcapture %}{% endif %}
+
+<div class="page-project" style="--accent: {{ accent_color }}">
+
+	<header class="post__header header--single">
+
+		<div class="wrap">
+			<h3 class="post__title">{{ page.title }}</h3>
+			
+			<h6 class="post__subtitle">{{ page.subtitle }}</h6>
+		</div>
+
+		<img src="/images/projects/{{ page.featured_image }}" class="post__featured-image">
+
+	</header>
+
+
+	<section class="post-full">
+
+		<div class="wrap">
+
+			<article class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
+				{{ page.content }}
+			</article>
+			
+		</div>
+
+	</section>
+</div>

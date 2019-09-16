@@ -1,0 +1,34 @@
+<section class="about">
+  {% if include.divider == true %}
+    <div class="wrap"><hr/></div>
+    {% endif %}
+  <div class="wrap grid">
+      
+
+    <div class="about__image">
+        <style>
+            .divcss-title{font-size:13; font-weight:100; color:#999999}
+        </style>
+      <img src="/images/profile.jpg" alt="">
+      <h6><a class="divcss-title">Prospective Ph.D. Student</a></h6>
+      </br>
+      </br>
+      {% include component-socials.html %}
+    </div>
+
+    <div class="about__content">
+        <style>
+            .divcss-blue8{border-bottom:5px solid #4C60E6} 
+            .divcss-blue3{border-bottom:2px solid #4C60E6} 
+            .divcss-news{color:grey}
+            .divcss-link{font-weight:150; color:#4C60E6}
+        </style>
+      <h2 class="title"><span class="divcss-blue8"></span>All News<br/>
+      <h5><span class='divcss-news'>Aug 24, 2019</span>&nbsp&nbsp&nbsp Presented a poster "Provenance and Workflow in the Sciences: Looking at a Real-World Example" at 2019 DataONE AHM. </h5><br/>
+      <h5><span class='divcss-news'>May 22, 2019</span>&nbsp&nbsp&nbsp Excited to be joining CIRSS and working with Prof. Bertram Ludäscher!</h5><br/>
+      <h5><span class='divcss-news'>Sep 01, 2018</span>&nbsp&nbsp&nbsp Started a new dream chasing journey in UIUC. My mentor for the coming semester is Pro. Matthew J Turk.</h5><br/>
+    <br>
+
+    </div>
+  </div>
+</section>

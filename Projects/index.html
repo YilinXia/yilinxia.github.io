@@ -1,0 +1,76 @@
+---
+layout: default
+title: Projects
+description: Made includes a beautiful grid-based blog with pagination.
+featured_image: /images/social.jpg
+---
+
+<div class="page-blog">
+
+	<section class="listing">
+		<div class="wrap">
+			
+
+			{% for project in site.projects reversed %}
+
+			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
+
+			<article class="project__preview">
+
+
+				<h4 class="project__title"><a style="--accent: {{ accent_color }}">{{ project.title }}</a>
+					<!--a>{{ project.title }}</a-->
+					<style>
+						.divcss-label{
+    						color: white;
+							border-radius:10px;
+						}
+					</style>
+					{% for label in project.label %}
+					&nbsp;<label>
+					<span class ="divcss-label" style="background-color:{{ accent_color }}; border: 2px solid {{ accent_color }}; color: {{ project.font_color }}" >{{label}}</style></span>
+					</label> 
+					{% endfor %}
+					<p>{{ project.period }}</p>
+				</h4>
+
+
+				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
+					{% for image in project.gallery_images %}
+					<!--a href="{{ project.link }}"><img src="/images/projects/{{ image }}" alt="" class="project__image"></a-->
+					<a><img src="/images/projects/{{ image }}" alt="" class="project__image"></a>
+					{% endfor %}
+				</div>
+
+				<div class="project__content grid" style="border-color: {{ accent_color }}">
+					<h6 class="project__subtitle">{{ project.subtitle }}</h6>
+					
+					<p class="project__description --small">
+						{{ project.description }}
+						<a href="{{ project.link }}" class="project__link button--text "
+							style="color: {{ accent_color }}; --color-var: {{ accent_color }}">{{ project.linkname }}</a>
+					</p>
+				</div>
+			</article>
+
+			{% endfor %}
+		</div>
+	</section>
+
+	{% if paginator.total_pages > 1 %}
+
+	<section class="pagination">
+		<div class="wrap">
+			{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
+				class="button--text--accent --left pagination__prev">Newer Posts</a>
+			{% endif %}
+			{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+				class="button--text--accent --right pagination__next">Older Posts</a>
+			{% endif %}
+		</div>
+	</section>
+
+	{% endif %}
+</div>
